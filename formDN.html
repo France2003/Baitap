@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            margin-top: 120px;
+            margin-left: 613px;
+            width: 360px;
+            height:450px;
+            
+            box-shadow: 0px 0px 10px 5px  rgb(128, 127, 127);
+        }
+        .container .tieude h3{
+            padding-top: 15px;
+        }
+        .tieude{
+            text-align: center;
+        }
+        .main{
+            padding-top: 20px;
+            padding-left: 25px;
+            border-radius: 4px;
+            line-height: 19px;
+        }
+        .tieude p{
+            color: rgb(204, 204, 204);
+        }
+        .container .main label{
+            line-height: 35px;
+        }
+        input{
+            width: 300px;
+            height: 38px;
+            display: block;
+            border-radius: 3px;
+            border: 1px solid gray;
+        }
+        button{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            margin-top: 25px;
+            width: 300px;
+            height: 40px; 
+            color: aliceblue;
+            background-color: rgb(32, 201, 192);
+            border: none;
+            border-radius: 7px;
+            cursor:pointer;
+            transition: 1s;
+        }
+        button:hover{
+            background-color: rgb(0, 236, 24);
+        }
+        input::placeholder{
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tieude">
+            <h3>Thành viên đăng ký</h3>
+            <p>Cùng nhau học lập trình miễn phí<i class='bx bxs-heart bx-tada' style="color: red;"></i></p>
+        </div>
+        <form class="main">
+            <label for="txtTen"><b>Tên đầy đủ</b></label>
+            <input type="text" id="txtTen" placeholder="VD: " autocomplete="off" required> 
+            <label for="txtEmail"><b>Email</b></label><br>
+            <input type="email" id="txtEmail" placeholder="VD:">
+            <label for="txtPass"><b>Mật khẩu</b></label><br>
+            <input type="password"  id="txtPass" placeholder="Nhập mật khẩu">
+            <label for="txtPassLai"><b>Nhập lại mật khẩu</b></label><br>
+            <input type="password" id="txtPassLai" placeholder="Nhập lại mật khẩu">
+            <button type="submit">Đăng ký</button>
+        </form>
+    </div>
+</body>
+</html>
