@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bài 9</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* ba thuộc tính bắt buộc khi làm thẻ */
+        }
+        body{
+            height: 200vh; /* viewport height */
+        }
+        .menu{
+            background: green;
+            text-align: center;
+            padding: 5px 0;
+        }
+        .menu ul li{
+            /* bỏ dấu chấm tròn mặc định */
+            list-style: none;
+            /* đưa các Li lên hàng ngang */
+            /* inline: dàn hàng ngang, block: quy định lại kích thước cho cá Li */
+            display: inline-block; 
+            width: 120px;
+            margin-left: 25px;
+            padding: 7px 0;
+            /* góc cong của border theo 4 góc */
+            border-radius: 3px; 
+            /* chuyển tiếp từ hình dáng này sang hình dáng kia mất 1 thời gian */
+            transition: 0.5s;
+            position: relative;
+        }
+        /* pseudo-class: hover: khi rê chuột vào bên trong */
+        /* khi rê chuột vào li, thì li đổi màu nền */
+        .menu ul li:hover{
+            background: rgb(5, 197, 5);
+        }
+        /* Khi hover vào li cha, thì .HTML2 nằm bên trong sẽ được  */
+        .menu ul li:hover .HTML2{
+            display: block;
+        }
+        .menu ul li a{
+            color: aliceblue;
+            /* bỏ đường gạch dưới mặc định của a */
+            text-decoration: none;
+            /* chuyển thẻ a từ inline sang block */
+            display: block;
+        }
+        .menu ul li .HTML2{
+            position: absolute;
+            top: 100%;
+            left: 15px;
+            background: green;
+            padding: 5px;
+            display: none;
+        }
+        /* chọn li nằm trong .HTML2 */
+        .menu ul li .HTML2 ul li{
+            width: 180px;
+            margin-left: 0;
+            border-bottom: 1px dotted grey;
+            text-align: left;
+            padding: 10px;
+            border-radius: 0;
+        }
+        .menu ul li .HTML2 ul li:hover a{
+            color: rgb(228, 228, 228);
+        }
+        .menu ul li .HTML2 ul li:last-child{
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">HTML</a>
+                    <div class="HTML2">
+                        <ul>
+                            <li><a href="#">Descript</a></li>
+                            <li><a href="#">Tags</a></li>
+                            <li><a href="#">Example</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JS</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
